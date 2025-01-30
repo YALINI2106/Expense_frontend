@@ -41,7 +41,7 @@ function App() {
   const removeFromList=async(id)=>{
     // console.log("deleted")
     await axios.delete(`https://mern-backend-cgka.onrender.com/api/expenses/${id}`)
-    const newTransactions=transactions.filter((txn)=>txn.id!==id);
+    const newTransactions=transactions.filter((txn)=>txn._id!==id);
     setTransactions(newTransactions);
   }
 
